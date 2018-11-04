@@ -58,3 +58,6 @@ with open('data.csv', "w") as f:
     writer = csv.writer(f)
     for row in csv_rows:
         writer.writerow(row)
+     
+scraperwiki.sqlite.save_var('parcels','owner_name', 'addresses')
+print scraperwiki.sqlite.get_var('addresses')
